@@ -9,9 +9,6 @@ function addTask() {
   };
   task = [];
   task.push(newTask);
-  localStorage.setItem(task, JSON.stringify(task));
-  console.log(task);
-  console.log(localStorage);
   getToDoList(task);
 }
 
@@ -24,7 +21,6 @@ function getToDoList(tasks) {
         li.classList.toggle('compl-task');
     }
     li.append(el.task);
-    console.log("li", li);
 
     const btn = document.createElement("button");
     btn.classList.add("btn");
