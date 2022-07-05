@@ -9,7 +9,9 @@ function addTask() {
   };
   task = [];
   task.push(newTask);
+  localStorage.setItem(task, JSON.stringify(task));
   console.log(task);
+  console.log(localStorage);
   getToDoList(task);
 }
 
